@@ -1,6 +1,6 @@
-/*! gridster.js - v0.2.1 - 2013-10-28
+/*! gridster.js - v0.2.1 - 2014-01-13
 * http://gridster.net/
-* Copyright (c) 2013 ducksboard; Licensed MIT */
+* Copyright (c) 2014 ducksboard; Licensed MIT */
 
 ;(function($, window, document, undefined){
     /**
@@ -1797,11 +1797,11 @@
                     'min-width': '',
                     'min-height': ''
                 });
+            if (this.options.resize.stop) {
+                this.options.resize.stop.call(this, event, ui, this.$resized_widget);
+            }
         }, this), 300);
 
-        if (this.options.resize.stop) {
-            this.options.resize.stop.call(this, event, ui, this.$resized_widget);
-        }
     };
 
     /**
