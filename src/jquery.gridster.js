@@ -1078,11 +1078,11 @@
                     'min-width': '',
                     'min-height': ''
                 });
+            if (this.options.resize.stop) {
+                this.options.resize.stop.call(this, event, ui, this.$resized_widget);
+            }
         }, this), 300);
 
-        if (this.options.resize.stop) {
-            this.options.resize.stop.call(this, event, ui, this.$resized_widget);
-        }
     };
 
     /**
